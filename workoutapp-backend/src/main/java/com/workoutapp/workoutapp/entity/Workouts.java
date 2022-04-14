@@ -36,10 +36,10 @@ public class Workouts {
 
     // Need to figure out how to implement sets and reps in DB and here. Need to have one lift have many sets and each set has one rep
     @Column(name = "sets_per_lift")
-    private Integer setsPerLift;
+    private List<Integer> setsPerLift;
     
     @Column(name = "reps_per_set")
-    private Integer repsPerSet;
+    private List<Integer> repsPerSet;
 
     @Column(name = "weight")
     private Integer weight;
@@ -53,7 +53,7 @@ public class Workouts {
     Workouts() {}
 
     @SuppressWarnings("unchecked")
-    Workouts(Long userId, List lifts, Integer setsPerLift, Integer repsPerSet, Integer weight, String dayOfWeek, Date dateOfWorkout) {
+    Workouts(Long userId, List lifts, List setsPerLift, List repsPerSet, Integer weight, String dayOfWeek, Date dateOfWorkout) {
 
         this.userId = userId;
         this.lifts = lifts;
