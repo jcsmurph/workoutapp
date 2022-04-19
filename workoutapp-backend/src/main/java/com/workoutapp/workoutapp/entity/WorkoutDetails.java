@@ -22,12 +22,12 @@ public class WorkoutDetails {
     @Column(name = "workout_details_id")
     private Long workoutDetailsId;
 
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "workout_id")
-    @JoinColumn(name = "workout_id", nullable = false)
-    private WorkoutHeader workoutIdLong;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "workoutId", nullable = false)
+    private WorkoutHeader workoutId;
     
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "lift_name")
-    @JoinColumn(name = "lift_name", nullable = false)
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "liftName", nullable = false)
     private WeightliftingMovements liftName;
 
     @Column(name = "set_number")
