@@ -1,8 +1,9 @@
 package com.workoutapp.workoutapp.config;
 
+import com.workoutapp.workoutapp.entity.WorkoutHeader;
 import com.workoutapp.workoutapp.entity.Users;
 import com.workoutapp.workoutapp.entity.WeightliftingMovements;
-import com.workoutapp.workoutapp.entity.Workouts;
+import com.workoutapp.workoutapp.entity.WorkoutDetails;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
@@ -29,6 +30,11 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
         
         config.getExposureConfiguration()
         .forDomainType(WorkoutHeader.class)
+        .withItemExposure((metadata, httpMethods) -> httpMethods.disable())
+        .withCollectionExposure((metadata, httpMethods) -> httpMethods.disable());
+
+        config.getExposureConfiguration()
+        .forDomainType(WorkoutDetails.class)
         .withItemExposure((metadata, httpMethods) -> httpMethods.disable())
         .withCollectionExposure((metadata, httpMethods) -> httpMethods.disable());
     }
