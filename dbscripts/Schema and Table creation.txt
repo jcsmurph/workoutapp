@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `workout-app`.`weightlifting` (
   `body_part` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`lift_name`)
 ) 
-ENGINE=InnoDB
+ENGINE=InnoDB;
 
 -- -----------------------------------------------------
 -- Table `workout-app`.`workout_header`
@@ -37,10 +37,10 @@ CREATE TABLE IF NOT EXISTS `workout-app`.`workout_header` (
   `day_of_week` VARCHAR(255) NOT NULL,
   `date_of_workout` DATE NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_category` (`lift_name`)
-  CONSTRAINT `fk_category` FOREIGN KEY (`lift_name`) REFERENCES `weightlifting_movements` (`lift_name`)CONSTRAINT
-  KEY `fk_category` (`workout_details_id`)
-  CONSTRAINT `fk_category` FOREIGN KEY (`workout_details_id`) REFERENCES `workout_details` (`workout_details_id`)CONSTRAINT
+  KEY `fk_category` (`lift_name`),
+  CONSTRAINT `fk_category` FOREIGN KEY (`lift_name`) REFERENCES `weightlifting_movements` (`lift_name`),
+  KEY `fk_category` (`workout_details_id`),
+  CONSTRAINT `fk_category` FOREIGN KEY (`workout_details_id`) REFERENCES `workout_details` (`workout_details_id`)
 ) 
 ENGINE=InnoDB
 AUTO_INCREMENT = 1;
@@ -56,10 +56,10 @@ CREATE TABLE IF NOT EXISTS `workout-app`.`workouts` (
   `reps` INTEGER(10) NOT NULL,
   `weight` INTEGER(10) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_category` (`lift_name`)
-  CONSTRAINT `fk_category` FOREIGN KEY (`lift_name`) REFERENCES `weightlifting_movements` (`lift_name`)CONSTRAINT
-  KEY `fk_category` (`workout_id`)
-  CONSTRAINT `fk_category` FOREIGN KEY (`workout_id`) REFERENCES `workout_header` (`workout_id`)CONSTRAINT
+  KEY `fk_category` (`lift_name`),
+  CONSTRAINT `fk_category` FOREIGN KEY (`lift_name`) REFERENCES `weightlifting_movements` (`lift_name`),
+  KEY `fk_category` (`workout_id`),
+  CONSTRAINT `fk_category` FOREIGN KEY (`workout_id`) REFERENCES `workout_header` (`workout_id`)
 ) 
 ENGINE=InnoDB
 AUTO_INCREMENT = 1;
@@ -89,3 +89,7 @@ VALUES ('Dumbell Bicep Curl', 'Bicep');
 
 INSERT INTO weightlifting (lift, body_part)
 VALUES ('Tricep Extension', 'Tricep');
+
+
+
+
