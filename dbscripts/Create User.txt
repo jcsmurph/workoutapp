@@ -1,0 +1,5 @@
+CREATE USER 'workoutapp'@'localhost' IDENTIFIED BY 'workoutapp';
+
+GRANT ALL PRIVILEGES ON * . * TO 'workoutapp'@'localhost';
+
+ALTER USER 'workoutapp'@'localhost' IDENTIFIED WITH mysql_native_password BY 'workoutapp';
