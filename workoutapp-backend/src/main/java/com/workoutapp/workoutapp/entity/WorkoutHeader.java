@@ -25,9 +25,9 @@ public class WorkoutHeader {
 
     @OneToOne
     @JoinColumn(name = "user_id", nullable = false)
-    private Long userId;
+    private Users userId;
 
-        @Column(name = "day_of_week")
+    @Column(name = "day_of_week")
     private String dayOfWeek;
 
     @Column(name = "date_of_workout")

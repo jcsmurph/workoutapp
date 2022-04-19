@@ -16,13 +16,4 @@ public class WeightliftingMovements {
 
     @Column(name = "body_part")
     private String bodyPart;
-
-    WeightliftingMovements(String liftName, String bodyPart){
-
-        this.liftName = liftName;
-        this.bodyPart = bodyPart;
-
-    }
-
-
 }

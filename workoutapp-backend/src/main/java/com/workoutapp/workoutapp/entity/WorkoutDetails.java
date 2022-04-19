@@ -24,11 +24,11 @@ public class WorkoutDetails {
 
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "workout_id")
     @JoinColumn(name = "workout_id", nullable = false)
-    private Long workoutIdLong;
+    private WorkoutHeader workoutIdLong;
     
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "lift_name")
     @JoinColumn(name = "lift_name", nullable = false)
-    private String liftName;
+    private WeightliftingMovements liftName;
 
     @Column(name = "set_number")
     private Integer setNumber;
