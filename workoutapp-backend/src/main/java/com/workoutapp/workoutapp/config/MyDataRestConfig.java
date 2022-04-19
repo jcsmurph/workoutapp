@@ -28,7 +28,7 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
         .withCollectionExposure((metadata, httpMethods) -> httpMethods.disable(HttpMethod.DELETE));
         
         config.getExposureConfiguration()
-        .forDomainType(Workouts.class)
+        .forDomainType(WorkoutHeader.class)
         .withItemExposure((metadata, httpMethods) -> httpMethods.disable())
         .withCollectionExposure((metadata, httpMethods) -> httpMethods.disable());
     }
