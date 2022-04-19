@@ -36,11 +36,11 @@ CREATE TABLE IF NOT EXISTS `workout-app`.`workout_header` (
   `workout_details_id` BIGINT(20) NOT NULL,
   `day_of_week` VARCHAR(255) NOT NULL,
   `date_of_workout` DATE NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_category` (`lift_name`),
-  CONSTRAINT `fk_category` FOREIGN KEY (`lift_name`) REFERENCES `weightlifting_movements` (`lift_name`),
-  KEY `fk_category` (`workout_details_id`),
-  CONSTRAINT `fk_category` FOREIGN KEY (`workout_details_id`) REFERENCES `workout_details` (`workout_details_id`)
+  PRIMARY KEY (`workout_id`),
+  FOREIGN KEY (`lift_name`) REFERENCES `weightlifting_movements` (`lift_name`),
+  FOREIGN KEY (`workout_details_id`) REFERENCES `workout_details` (`workout_details_id`),
+  FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
+) 
 ) 
 ENGINE=InnoDB
 AUTO_INCREMENT = 1;
