@@ -11,6 +11,9 @@ import lombok.Data;
 public class WeightliftingMovements {
 
     @Id
+    @Column(name = "lift_id")
+    private Integer liftId;
+
     @Column(name = "lift_name")
     private String liftName;
 
