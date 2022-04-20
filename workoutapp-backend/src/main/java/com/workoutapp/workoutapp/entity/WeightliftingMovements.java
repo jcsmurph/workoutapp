@@ -11,6 +11,7 @@ import lombok.Data;
 public class WeightliftingMovements {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "lift_id")
     private Integer liftId;
 
