@@ -7,7 +7,7 @@ import { WeightliftingMovements } from '../common/weightlifting-movements';
   providedIn: 'root'
 })
 export class WeightliftingMovementsService {
-  private baseUrl = 'http://localhost:8080/api/workout-details';
+  private baseUrl = 'http://localhost:8080/api/weightlifting-movements';
 
   constructor(private httpClient: HttpClient) { }
 

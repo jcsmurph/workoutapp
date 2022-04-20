@@ -1,10 +1,12 @@
-<p *ngFor="let tempWorkoutDetail of workoutDetails">
+<div *ngFor="let workoutDetail of workoutDetails">
+    <div *ngFor="let movement of weightliftingMovements">
+        <div *ngIf="workoutDetail.liftId==movement.liftId">
 
-   <! -- Need to bring in lift name -->
-    Lift Name: {{ tempWorkoutDetail.liftName}} <br>
-    Sets: {{ tempWorkoutDetail.setNumber}} <br>
-    Reps: {{ tempWorkoutDetail.repetitions}} <br>
-    Weight: {{ tempWorkoutDetail.weight}}
+    Lift Name: {{ movement.liftName}} <br>
+    Sets: {{ workoutDetail.setNumber}} <br>
+    Reps: {{ workoutDetail.repetitions}} <br>
+    Weight: {{ workoutDetail.weight}}
 
-
-</p>
+        </div>
+    </div>
+</div>
