@@ -28,7 +28,7 @@ public class WorkoutDetails {
     
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "liftId", nullable = false)
-    private WeightliftingMovements liftName;
+    private WeightliftingMovements liftId;
 
     @Column(name = "set_number")
     private Integer setNumber;
