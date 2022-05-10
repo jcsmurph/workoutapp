@@ -25,18 +25,24 @@ public class WorkoutDetails {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "workoutId", nullable = false)
     private WorkoutHeader workoutId;
-    
+
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "liftId", nullable = false)
     private WeightliftingMovements liftId;
 
     @Column(name = "set_number")
     private Integer setNumber;
-    
+
     @Column(name = "repetitions")
     private Integer repetitions;
 
     @Column(name = "weight")
-    private Integer weight;    
+    private Integer weight;
+
+    public void getWorkoutDetails(Integer setNumber, Integer repetitions, Integer weight) {
+        this.setNumber = setNumber;
+        this.repetitions = repetitions;
+        this.weight = weight;
+    }
 
 }

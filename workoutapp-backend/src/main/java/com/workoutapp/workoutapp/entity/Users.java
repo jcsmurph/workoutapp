@@ -22,4 +22,11 @@ public class Users {
     @Column(name = "last_name")
     private String lastName;
 
+
+    public void addUser(String firstName, String lastName) {
+        this.lastName = lastName;
+        this.firstName = firstName;
+    }
+
+
 }

@@ -11,6 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.apache.catalina.User;
+
 import lombok.Data;
 
 @Entity
@@ -32,5 +34,17 @@ public class WorkoutHeader {
 
     @Column(name = "date_of_workout")
     private Date dateOfWorkout;
+
+
+    public void getWorkoutHeader(User userId, String dayOfWeek, Date dateOfWorkout) {
+        this.userId = (Users) userId;
+        this.dayOfWeek = dayOfWeek;
+        this.dateOfWorkout = dateOfWorkout;
+    
+    }
+
+
+
+
 
 }

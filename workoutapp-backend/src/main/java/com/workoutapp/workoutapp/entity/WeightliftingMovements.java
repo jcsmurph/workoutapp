@@ -3,11 +3,9 @@ package com.workoutapp.workoutapp.entity;
 import javax.persistence.*;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-import lombok.Data;
 
 @Entity
 @Table(name="weightlifting_movements")
-@Data
 public class WeightliftingMovements {
 
     @Id
@@ -20,4 +18,19 @@ public class WeightliftingMovements {
 
     @Column(name = "body_part")
     private String bodyPart;
+
+    public String getLiftName(Integer liftId) {
+        this.liftId = liftId;
+        
+        return liftName;
+    }
+
+    public void addLift(String liftName, String bodyPart) {
+        this.liftName = liftName;
+        this.bodyPart = bodyPart;
+    }
+
+
+
+
 }

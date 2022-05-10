@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @RepositoryRestResource(collectionResourceRel = "users", path = "users")
 public interface UserRepository extends JpaRepository<Users, Long> {
 
-
+    
 
     
 }
