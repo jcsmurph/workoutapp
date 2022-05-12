@@ -7,12 +7,12 @@ My goals for this project are:
 
   1. Learn the process of web application development from scratch
   2. Gain a better understanding of both backend and frontend development
-  3. Build a complimentary mobile app for Andriod
+  3. Build a complimentary mobile app for Andriod <- In Progress
 
 The tech stack is planned as the following:
 
 FrontEnd: TBD. Most likely React
-BackEnd: Spring Boot
+BackEnd: Java/Spring Boot
 DataBase: MySQL
 
 
